@@ -7,11 +7,6 @@ Programa em Python com interface gráfica para geração rápida de senhas e tok
 - [Descrição](#descrição)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
-- [Estrutura do Código](#estrutura-do-código)
-- [Possíveis Erros e Soluções](#possíveis-erros-e-soluções)
-- [Licença](#licença)
 
 ---
 
