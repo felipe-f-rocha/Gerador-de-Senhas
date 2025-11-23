@@ -6,12 +6,14 @@ from CTkMessagebox import CTkMessagebox
 
 
 def gerar_senha(size):
+    """Essa função gera uma senha baseada no tamanho escolhido"""
     character = string.ascii_letters + string.digits + string.punctuation  # "Váriavel" com todos os "possiveis caract"
     password = "".join(secrets.choice(character) for i in range(size))
     return password  # Escolha aleatória dos caracteres fornecidos
 
 
 def gerar_token():
+    """Essa função gera um token baseado em uma senha de três caracteres aleatórios"""
     character = string.digits  # Gera os "digitos númericos" que irão compor a senha inicial
     password = "".join(secrets.choice(character) for i in range(3))  # Escolhe 3 "digitos" aleatoriamente
     token = secrets.token_hex(int(password))  # Converte a senha em um "token"
@@ -19,6 +21,7 @@ def gerar_token():
 
 
 def copiar_texto(texto):
+    """Essa função copia a senha ou token gerados diretamente para a área de tranferência"""
     pyperclip.copy(texto)
     msg = CTkMessagebox(
         title="Copiado",
