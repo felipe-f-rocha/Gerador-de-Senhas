@@ -45,13 +45,14 @@ msg = CTkMessagebox(
 
 resposta = msg.get()  # Retorna o texto do botão clicado
 
-if resposta == "Senha":
-    dialog = customtkinter.CTkInputDialog(text="Digite o tamanho da sua senha:")
-    size = int(dialog.get_input())
-    senha = gerar_senha(size)
-    copiar_texto(senha)
-elif resposta == "Token":
-    token = gerar_token()
-    copiar_texto(token)
+match resposta:
+    case "Senha":
+        dialog = customtkinter.CTkInputDialog(text="Digite o tamanho da sua senha:")
+        size = int(dialog.get_input())
+        senha = gerar_senha(size)
+        copiar_texto(senha)
+    case "Token":
+        token = gerar_token()
+        copiar_texto(token)
 
 app.destroy()
